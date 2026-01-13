@@ -16,5 +16,23 @@ This project treats spam detection as a modelling problem rather than a rules-ba
 - scikit-learn
 - pandas
 
-## Project status
-In progress
+## Quick start
+
+```bash
+pip install -e .
+python -m spam_classifier.cli --csv data/sample.csv
+
+Email text> free prize claim now
+→ SPAM (P(spam)=0.91)
+
+Email text> meeting tomorrow at 10
+→ NOT SPAM (P(spam)=0.08)
+
+src/spam_classifier/
+  data.py    # Load and validate labelled datasets
+  model.py   # TF-IDF + logistic regression model
+  cli.py     # Command-line interface
+tests/
+  test_pipeline.py
+data/
+  sample.csv
