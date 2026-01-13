@@ -1,3 +1,11 @@
+"""
+End-to-end text classification model:
+raw text → TF-IDF features → logistic regression → probabilistic output.
+
+Designed to emphasise interpretability, validation on unseen data,
+and explicit handling of uncertainty via a configurable decision threshold.
+"""
+
 from __future__ import annotations
 
 from dataclasses import dataclass
